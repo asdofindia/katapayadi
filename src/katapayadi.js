@@ -54,11 +54,11 @@ export function decode(encoded) {
   var currDigitCauser;
   encoded += 'ാ';
   for (var chr of encoded) {
-    console.log('chr' + chr)
-    if (currDigit != undefined) {
+    // console.log('chr' + chr)
+    if (currDigit !== undefined) {
       if (destroyers.has(chr)) {
         currDigit = undefined;
-        console.log('destroyer' + chr)
+        // console.log('destroyer' + chr)
       } else {
         decodedNumber = currDigit + decodedNumber;
         // console.log(currDigitCauser, currDigit);
